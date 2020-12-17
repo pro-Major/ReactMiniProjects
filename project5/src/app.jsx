@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import axios from "axios";
+import List from "./list";
 class App extends Component{
     constructor(){
         super()
@@ -21,10 +22,32 @@ class App extends Component{
                     key:'AIzaSyCTFtUWKBikDCI1mROZQ-3eYqYx2hmBaz0'
                 }
         });
-        console.log(response.data)
+        // console.log(response.data)
+        this.setState({video: response.data.items})
+        
     }  
     render() {
-       return (<h1> Hello Component</h1>)
+       return (
+           <React.Fragment>
+               <div className="container" >
+                   <div className="row">
+                       <div className="col-md-12">
+                           Search
+                       </div>
+                   </div>
+                   <div className="row">
+                       <div className="col-md-8">
+                           Video Details
+                       </div>
+                       <div className="col-md-4">
+                           <List videolist={this.state.videos}/>
+                       </div>
+                   </div>
+               </div>
+               
+           </React.Fragment>
+       )
     }
+
 }
 export default App;
