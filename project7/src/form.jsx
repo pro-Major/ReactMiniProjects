@@ -16,6 +16,7 @@ class Form extends Component{
         }
     }
     render(){
-        return <h1> Hello how are you </h1> 
+        return <h1> Form </h1> 
     }
 }
+export default Form;
