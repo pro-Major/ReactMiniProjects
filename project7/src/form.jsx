@@ -1,4 +1,6 @@
 import React,{Component} from "react";
+import SimpleReactValidator from 'simple-react-validator';
+import "./form.css"
 
 class Form extends Component{
     constructor(props){
@@ -10,15 +12,13 @@ class Form extends Component{
             contactno : '',
             UserLogin:{
                 userid :'',
-                useremail : '',
-
-            }
-
-
-        }
+                useremail : '', }
+         }
+         this.validator = new SimpleReactValidator({autoForceUpdate: this});
     }
     handleSubmit = (e) => {
         e.preventDefault();
+        if(this.validator.allValid()) {
         let data = {
             firstname : this.state.firstname,
             lastname : this.state.lastname,
@@ -27,11 +27,18 @@ class Form extends Component{
             UserLogin: {
                 userid : this.state.UserLogin.userid,
                 useremail : this.state.UserLogin.useremail,
+                } 
             }
-       
-            
+                 alert("thanks for the Registration")
+                 console.log(data);
         }
-        console.log(data);
+         else {
+            this.validator.showMessages();
+            // rerender to show messages for the first time
+            // you can use the autoForceUpdate option to do this automatically`
+            this.forceUpdate();
+
+        }
     };
     handleInputData = (e) => {
        this.setState({[e.target.name]:[e.target.value]})
@@ -63,6 +70,9 @@ class Form extends Component{
                                 name="firstname"
                                 value={this.state.firstname}
                                 onChange={this.handleInputData} /> 
+                                {
+                                  this.validator.message('firstname', this.state.firstname, 'required|min:5') 
+                                }
                             </div>
                             <div className="form-group">
                                 LastName : 
@@ -70,13 +80,19 @@ class Form extends Component{
                                 name="lastname"
                                 value={this.state.lastname}
                                 onChange={this.handleInputData} /> 
+                                {
+                                    this.validator.message('lastname',this.state.lastname, 'required|min:5')
+                                }
                             </div>
                             <div className="form-group">
                                 Email :
                                 <input type="text" className="form-control" placeholder="Enter Your Email"
                                 name="email"
                                 value={this.state.email}
-                                onChange={this.handleInputData} /> 
+                                onChange={this.handleInputData} />
+                                {
+                                    this.validator.message('email',this.state.email, 'required|min:5')
+                                }
                             </div>
                             <div className="form-group">
                                 Contact Number  :
@@ -84,6 +100,9 @@ class Form extends Component{
                                 name="contactno"
                                 value={this.state.contactno}
                                 onChange={this.handleInputData} /> 
+                                {
+                                    this.validator.message('contactno',this.state.contactno, 'required|phone')
+                                }
                             </div>
                             <h3>User Login</h3> 
                             <div className="form-group">
@@ -92,6 +111,9 @@ class Form extends Component{
                                 name="userid"
                                 value={this.state.UserLogin.userid}
                                 onChange={this.setuserid} /> 
+                                 {
+                                    this.validator.message('userid',this.state.UserLogin.userid, 'required')
+                                }
                             </div>
                             <div className="form-group">
                                 User_Login_Email :
@@ -99,6 +121,9 @@ class Form extends Component{
                                 name="useremail`"
                                 value={this.state.UserLogin.useremail}
                                 onChange={this.setuseremail} /> 
+                                {
+                                    this.validator.message('userid',this.state.UserLogin.useremail, 'required')
+                                }
                             </div>
                                 <button type="submit"  className="btn btn-outline-danger" > Submit </button>
                         </form>
