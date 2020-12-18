@@ -61,6 +61,7 @@ class Form extends Component{
     render(){
         return (
             <React.Fragment>
+                <div className="container">
                 <div className="row">
                     <div className="col-md-8">
                         <form onSubmit={this.handleSubmit} >
@@ -128,7 +129,8 @@ class Form extends Component{
                                 <button type="submit"  className="btn btn-outline-danger" > Submit </button>
                         </form>
                     </div>
-                </div>  
+                </div>
+                </div>
       </React.Fragment>
         )}
 }
