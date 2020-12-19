@@ -5,7 +5,8 @@ class App extends Component  {
     constructor(){
         super();
         this.state = {
-           allData: [] //created {allData} to fetch data.hits
+           allData: [], //created {allData} to fetch data.hits
+           searchdata : ''
        }
 
 
@@ -19,14 +20,25 @@ class App extends Component  {
        
     };
 
+    SearchProducts =(e) => {
+        // console.log(e.target.value)
+        this.setState({searchdata: e.target.value});
+        
+    };
+   
 
 render() {  
+    let searchfilter = this.state.allData
+                                    .filter(data => data.tags.toLowerCase()
+                                    .includes(this.state.searchdata.toLowerCase() ));
+                            // console.log(searchfilter);
     return(
         <div className="container">
-           <div className = "row" > <Searchfeild/>  </div>
+           <div className = "row" >
+                <Searchfeild SearchProductFilter={this.SearchProducts}/>  </div>
             <div className="row"> 
                 {
-                    this.state.allData.map(data =>  <Card data={data} key={data.id} />
+                    searchfilter.map(data =>  <Card data={data} key={data.id} />
                         
                     )
                     
