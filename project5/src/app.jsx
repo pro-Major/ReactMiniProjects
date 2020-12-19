@@ -22,7 +22,7 @@ class App extends Component{
                     key:'AIzaSyCTFtUWKBikDCI1mROZQ-3eYqYx2hmBaz0'
                 }
         });
-        // console.log(response.data)
+        console.log(response.data)
         this.setState({video: response.data.items})
         
     }  
@@ -40,7 +40,7 @@ class App extends Component{
                            Video Details
                        </div>
                        <div className="col-md-4">
-                           <List videolist={this.state.videos}/>
+                           <List videolist={this.state.video}/>
                        </div>
                    </div>
                </div>

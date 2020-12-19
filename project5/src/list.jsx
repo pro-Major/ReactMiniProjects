@@ -1,9 +1,7 @@
 import React from "react";
-import items from items;
+import Items from "./Items"
+const List = (props) => {
+    return(props.videolist.map((item) => <Items videoitem={item} key={item.id.videoId}  /> )) 
 
-const List =(props) => {
-    return( 
-       props.videolist.map((item) => <{items} {} /> )
-    )
-}
+};
 export default List;
