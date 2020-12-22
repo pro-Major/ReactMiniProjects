@@ -1,10 +1,14 @@
 import React,{Component} from "react";
-import ReactDom from "react-dom";
+import Navigation from "./component/navigation";
+
+
 
 class App extends Component{
     render(){
         return (
-            <h1> Hemllo Cheems</h1>
+            <React.Fragment>
+                <Navigation/>
+            </React.Fragment>
         )
     }
 }
