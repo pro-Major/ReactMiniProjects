@@ -1,5 +1,7 @@
 import React,{Component} from "react";
 import {axios} from "axios";
+import SearchProduct from "./component/search-product";
+import ProductCard from "./component/product-card";
 
 
 class App extends Component{
@@ -9,17 +11,29 @@ class App extends Component{
             ProductsData : [ ],
             SearchedData: ''
         }
-    }
-    fetchData = async () => {
-        let url = "https://pixabay.com/api/?key=19432804-bd5acf9b634cc280bbdda0f8f&q=yellow+flowers&image_type=photo&pretty=true";
-        let response = await axios.get(url)  //method="" /* get, delete, head, post, put and patch - required */
-
         }
-    render(){
+        
+     render(){
         
 
         return(
-            <h1> Hello genius </h1>
+            <React.Fragement>
+                <div className="container" >
+                    <div className="row">
+                        <div className="col-md-12">
+                            <SearchProduct/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <ProductCard/>
+                        </div>
+                    </div>
+                </div>
+            </React.Fragement>
+                
+           
+            
          )
     }
 }
