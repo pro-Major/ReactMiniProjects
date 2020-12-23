@@ -12,6 +12,7 @@ const Navigation = () => {
           <li className="active"><Link to="/admin">Admin</Link></li>
           <li><Link to="/products">Products</Link></li>
           <li><Link to="/contact">Contact</Link></li>
+          
         </ul>
         <button className="btn btn-danger navbar-btn">Button</button>
       </div>
