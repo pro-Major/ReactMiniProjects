@@ -1,7 +1,6 @@
 import React from "react"; 
 import Avatar from "./user-avatar";
 import UserName from "./user-name";
-import UserApproval from "./user_approval";
 
 const Usercard = (props) => {
     console.log(props)
