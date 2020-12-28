@@ -1,6 +1,8 @@
 import React,{Component} from "react";
 import axios from "axios";
 import List from "./list";
+import SearcFeild from "./searchfeild"
+import SearchFeild from "./searchfeild";
 class App extends Component{
     constructor(){
         super()
@@ -30,11 +32,7 @@ class App extends Component{
        return (
            <React.Fragment>
                <div className="container" >
-                   <div className="row">
-                       <div className="col-md-12">
-                           Search
-                       </div>
-                   </div>
+                   <SearchFeild/>
                    <div className="row">
                        <div className="col-md-8">
                            Video Details
