@@ -22,7 +22,7 @@ class App extends Component{
                     key:'AIzaSyCTFtUWKBikDCI1mROZQ-3eYqYx2hmBaz0'
                 }
         });
-        console.log(response.data)
+        
         this.setState({video: response.data.items})
         
     }  
