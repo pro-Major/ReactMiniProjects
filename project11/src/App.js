@@ -1,8 +1,7 @@
-import { Button } from "bootstrap";
 import React,{Component} from "react"
 import User from "./component/users";
-import Button from "./component/button";
-import Inputfeild from "./component/inputfeild";
+// import Button from "./component/button";
+// import Inputfeild from "./component/inputfeild";
 import Post from "./component/post";
 class App extends Component{
     constructor(){
@@ -11,10 +10,19 @@ class App extends Component{
     render(){
         return(
             <React.Fragment>
-                 <User/>
-                 <Button/>
-                 <Inputfeild/>
-                 <Post/>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <User/>
+                        </div>
+                        <Post/>
+                    </div>
+                </div>
+                {/* <div className="container">  //This was my CSS
+                <User/>
+                </div> 
+                  */}
+                
             </React.Fragment>
            
         )
