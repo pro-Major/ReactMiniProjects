@@ -6,7 +6,7 @@ return(
     <React.Fragment>
         <div className="container"> 
         <Inputfeild/>
-        <Button/>
+       
 </div>
              </React.Fragment>
     

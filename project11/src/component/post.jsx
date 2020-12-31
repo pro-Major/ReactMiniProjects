@@ -1,13 +1,9 @@
 import React from "react";
-const Post=()=>{
+const Post=(props)=>{
 return(
     <div> 
-       <h1> Hello </h1>
-    </div>
-       
-        
-   
-    
+       <h1> Hello User </h1>
+    </div>    
 )
 }
 export default Post;

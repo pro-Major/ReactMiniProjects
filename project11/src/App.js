@@ -1,12 +1,16 @@
 import React,{Component} from "react"
 import User from "./component/users";
+import Button from "./component/button";
+import Lang from "./context/languages";
 // import Button from "./component/button";
 // import Inputfeild from "./component/inputfeild";
 import Post from "./component/post";
 class App extends Component{
     constructor(){
-        super()
+        super();
+        
     }
+    
     render(){
         return(
             <React.Fragment>
@@ -14,6 +18,7 @@ class App extends Component{
                     <div className="row">
                         <div className="col-md-6">
                             <User/>
+                            <Button />
                         </div>
                         <Post/>
                     </div>
