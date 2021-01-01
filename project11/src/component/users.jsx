@@ -5,10 +5,9 @@ const User=()=>{
 return(
     <React.Fragment>
         <div className="container"> 
-        <Inputfeild/>
-       
-</div>
-             </React.Fragment>
+            <Inputfeild/>
+        </div>
+     </React.Fragment>
     
 )
 }

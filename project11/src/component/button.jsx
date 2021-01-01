@@ -11,14 +11,13 @@ class Button extends Component{
     changelanguage = (data)=>{
         this.setState({Lang : data})
         // console.log(this.state.Lang);
-
-        console.log(data);  
-    }
+      console.log(data);  
+            }
     static contextType = Lang;
    
     
     render(){ 
-        let text = (this.context == "english") ? "Hello User " : " Hola usuario ";   
+        let text = (this.context.Lang == "english") ? "Hello User " : " Hola usuario ";   
         
         return(
             
