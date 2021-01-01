@@ -6,7 +6,7 @@ class Post extends Component{
     }
     static contextType = Lang;
     render(){
-        const text02 = this.context;
+        const text02 = (this.context == 'english') ? 'India' : 'Europe'
         // const setlanguage = (this.context.Lang == 'english') ? 'India' : 'Europe';
         return(
 
