@@ -19,12 +19,15 @@ const App=()=>{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-           height: "600px",
+           height: "650px",
            border : "1px solid black " 
          
         }}>
             <div className="column" >
-            {/* <Count count={state.count}/> */} <h1> {count}</h1>
+                <div className="container" style={{ }}>
+                <h1> {count}</h1>
+                </div>
+            {/* <Count count={state.count}/> */} 
             <button className="btn btn-danger" onClick={changethenumber}> Click Me </button>
             </div>
             </div>
