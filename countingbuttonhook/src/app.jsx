@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Count from "./count";
 //useState (ReactHook) must be defined inside of top level function
 const App=()=>{
     const state = useState();
@@ -18,12 +19,14 @@ const App=()=>{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-           height: "200px",
+           height: "600px",
            border : "1px solid black " 
          
         }}>
-            <h2 > {count} </h2>
+            <div className="column" >
+            {/* <Count count={state.count}/> */} <h1> {count}</h1>
             <button className="btn btn-danger" onClick={changethenumber}> Click Me </button>
+            </div>
             </div>
             
             
