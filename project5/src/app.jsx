@@ -1,7 +1,6 @@
 import React,{Component} from "react";
 import axios from "axios";
 import List from "./list";
-import SearcFeild from "./searchfeild"
 import SearchFeild from "./searchfeild";
 class App extends Component{
     constructor(){
@@ -11,7 +10,7 @@ class App extends Component{
     }
     //method for giving search paramet to fetchSearchInputData function 
     componentDidMount(){
-        this.fetchSearchInputData('saadgi');
+        this.fetchSearchInputData('Selmon Bhai');
     }
     //Method for Fetching data from youtube API 
     fetchSearchInputData = async (data) => {
@@ -25,14 +24,15 @@ class App extends Component{
                 }
         });
         
-        this.setState({video: response.data.items})
+        this.setState({video: await response.data.items})
+        // console.log(response)
         
     }  
     render() {
        return (
            <React.Fragment>
                <div className="container" >
-                   <SearchFeild/>
+                   <SearchFeild inputdata={this.fetchSearchInputData}/>
                    <div className="row">
                        <div className="col-md-8">
                            Video Details
