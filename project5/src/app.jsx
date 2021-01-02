@@ -2,6 +2,7 @@ import React,{Component} from "react";
 import axios from "axios";
 import List from "./list";
 import SearchFeild from "./searchfeild";
+import VideoPlay from "./videodetails";
 class App extends Component{
     constructor(){
         super()
@@ -11,6 +12,9 @@ class App extends Component{
     //method for giving search paramet to fetchSearchInputData function 
     componentDidMount(){
         this.fetchSearchInputData('Selmon Bhai');
+    }
+    selectedVideoData(){
+        this.state()
     }
     //Method for Fetching data from youtube API 
     fetchSearchInputData = async (data) => {
@@ -35,7 +39,7 @@ class App extends Component{
                    <SearchFeild inputdata={this.fetchSearchInputData}/>
                    <div className="row">
                        <div className="col-md-8">
-                           Video Details
+                       <VideoPlay selectedVideo={this.state.}/>
                        </div>
                        <div className="col-md-4">
                            <List videolist={this.state.video}/>

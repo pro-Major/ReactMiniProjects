@@ -17,8 +17,7 @@ class App extends Component{
                 <Route path="/home" exact component={Home} />
                 <Route path="/products" exact render={(props) => <Products {...props}/> } />
                 <Route path="/product" exact render={(props) => <Product {...props} /> } /> 
-                
-                <Route path="/contact" exact component={Contact} /> 
+                <Route path="/contact"  component={Contact} /> 
                 <Route path="/admin" exact render={(props) => <Admin data="angular" {...props}/>} />
 
             </React.Fragment>
