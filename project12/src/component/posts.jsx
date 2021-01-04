@@ -12,7 +12,6 @@ const Post=(props)=>{
            }
            
         {
-            
             props.d.slice(0,10).map((item) => {
                 return(
                     <div className="col-md-12" key={item.id}>
