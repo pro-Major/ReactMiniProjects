@@ -1,10 +1,10 @@
 import React, { Component, useEffect, useState } from "react";
-import Search from "./component/searchfeild";
+import SearchFeild from "./component/searchfeild";
 import List from "./component/list";
 import axios from "axios";
 const App=()=>{
     const [YoutubeData,setYoutubeData] = useState([]);
-    const [searchData,setsearchData] = useState('football');
+    const [searchData,setsearchData] = useState('');
  
     useEffect(async()=>{
         const response = axios.get('https://www.googleapis.com/youtube/v3/search',{
@@ -23,20 +23,27 @@ const App=()=>{
 
         
     },[]);
-
+    const savingsearchdata= ()=>{
+            setsearchData={savingsearchdata}
+            console.log(searchData)
+    }
         return(
             <React.Fragment>
                 <div className="container">
-                <Search/> 
-                </div>
-                 <div className="container">
+                <SearchFeild savingsearchdata={savingsearchdata} /> 
+                
                      <div className="row">
-                         <div className="cl=md-12">
+                         <div className="col-md-8">
+                             <h1> VideoPlay</h1>
+                      </div>
+                     
+                         <div className="col-md-4">
                              <List YoutubeData={YoutubeData}/>
-                         </div>
-                     </div>
+                      </div>
+                </div>
+                </div>
 
-                 </div>
+                 
             </React.Fragment>
         )
   

@@ -9,7 +9,7 @@ return(
    <img className="card-img-top" src={props.videoitem.snippet.thumbnails.high.url}  alt={props.videoitem.snippet.title}  style={{width:"100%"}} /> 
    <div className="card-body">
      <h5 className="card-title">{props.videoitem.snippet.title}</h5>
-    <p className="card-text">{props.videoitem.snippet.description}</p>
+    <p className="card-text">Channel : {props.videoitem.snippet.channelTitle}</p>
   
    </div>
  </div>
