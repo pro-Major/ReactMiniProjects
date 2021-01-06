@@ -1,6 +1,5 @@
 import React from "react";
 const Item = (props) => {
-  console.log(props)
   if(!props.videoitem) {return( <h1> Loading... </h1>)}
 return( 
     

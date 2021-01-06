@@ -19,10 +19,9 @@ const App=()=>{
         );
         // console.log(await (await response).data.items)
         setYoutubeData(await (await response).data.items);
-        console.log(YoutubeData)
-
         
-    },[]);
+    },[searchData]);
+    
     const savingsearchdata= ()=>{
             setsearchData={savingsearchdata}
             console.log(searchData)
@@ -30,7 +29,7 @@ const App=()=>{
         return(
             <React.Fragment>
                 <div className="container">
-                <SearchFeild savingsearchdata={savingsearchdata} /> 
+                <SearchFeild /> 
                 
                      <div className="row">
                          <div className="col-md-8">

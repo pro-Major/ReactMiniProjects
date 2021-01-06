@@ -1,16 +1,10 @@
 import React,{Component, useEffect, useState} from "react";
-const SearchFeild=({savingsearchdata})=>{
-    const [onclicksearch,setonclicksearch] = useState('cricket');
+const SearchFeild=(props)=>{
+    const [onclicksearch,setonclicksearch] = useState('');
 
    const handleFormSubmit =(data)=> {
         data.preventDefault()
-        // props.searchData(onclicksearch);
-        // props.setsearchData(onclicksearch)      
-        // console.log(onclicksearch);
-    console.log(onclicksearch)
-        savingsearchdata={onclicksearch}
-        // console.log(savingsearchdata)
-    
+        props.setsearchData({onclicksearch})
 
     }
  
