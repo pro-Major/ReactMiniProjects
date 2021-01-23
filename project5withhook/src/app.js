@@ -4,7 +4,7 @@ import List from "./component/list";
 import axios from "axios";
 const App=()=>{
     const [YoutubeData,setYoutubeData] = useState([]);
-    const [searchData,setsearchData] = useState('');
+    const [searchData,setsearchData] = useState('cricke
  
     useEffect(async()=>{
         const response = axios.get('https://www.googleapis.com/youtube/v3/search',{
@@ -19,17 +19,19 @@ const App=()=>{
         );
         // console.log(await (await response).data.items)
         setYoutubeData(await (await response).data.items);
+
+       console.log(searchData)
         
     },[searchData]);
     
-    const savingsearchdata= ()=>{
-            setsearchData={savingsearchdata}
-            console.log(searchData)
-    }
+    // let savingsearchdata= ()=>{
+    //         setsearchData={savingsearchdata}
+    //         console.log(searchData)
+    // }
         return(
             <React.Fragment>
                 <div className="container">
-                <SearchFeild /> 
+                <SearchFeild  setsearchData={setsearchData}/> 
                 
                      <div className="row">
                          <div className="col-md-8">
