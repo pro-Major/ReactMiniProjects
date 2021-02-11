@@ -1,4 +1,4 @@
-#A Simple App for fetching Data through JSONPlaceHolder API using React Hook. 
+# A Simple App for fetching Data through JSONPlaceHolder API using React Hook. 
 
 
 
