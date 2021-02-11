@@ -1,6 +1,6 @@
 # Image finder application that uses the PixaBay API to fetch images
 
-![](pixabayAPI.jpg)
+![](pixabayAPI.JPG)
 
 
 
