@@ -1,5 +1,4 @@
-#  Image finder Simple application that uses the PixaBay API to fetch images
-
+#  A Simple Card with butons made in React
 
 
 
