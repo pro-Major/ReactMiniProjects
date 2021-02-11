@@ -1,5 +1,5 @@
 A simple Counting Button which increments a value by 1.
-![](couting_button-small.JPG)
+![](couting_button.JPG)
 
 
 
