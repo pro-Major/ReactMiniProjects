@@ -1,6 +1,6 @@
 # image finder application that uses the PixaBay API to fetch images
 
-![](/pixabayAPI.JPG)
+![](pixabayAPI.JPG-medium)
 
 # Getting Started with Create React App
 
