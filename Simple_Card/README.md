@@ -1,4 +1,4 @@
-#  image finder Simple application that uses the PixaBay API to fetch images
+#  Image finder Simple application that uses the PixaBay API to fetch images
 
 
 
